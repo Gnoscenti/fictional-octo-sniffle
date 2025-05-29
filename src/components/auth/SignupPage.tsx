@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext"; // Corrected path
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext'; // Corrected path
 
 const SignupPage: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const { signup } = useAuth(); // Use AuthContext
@@ -21,7 +21,7 @@ const SignupPage: React.FC = () => {
     setLoading(true);
     try {
       await signup(email, password);
-      navigate("/"); // Redirect to homepage or dashboard after signup
+      navigate('/'); // Redirect to homepage or dashboard after signup
     } catch (err: any) {
       setError(err.message || "Failed to create an account. Please try again.");
     }

@@ -1,16 +1,14 @@
-// Firebase configuration based on user screenshot
-// IMPORTANT: In a production environment, apiKey should be stored securely (e.g., environment variables)
-// and not hardcoded directly in the source code.
-
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY", // Replace with your actual API key from Firebase console
-  authDomain: "goldenaige.firebaseapp.com",
-  projectId: "goldenaige",
-  storageBucket: "goldenaige.appspot.com",
-  messagingSenderId: "241195884047",
-  appId: "1:241195884047:web:992055347cd00f344d7a",
-  measurementId: "G-51VL3BMR5H"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 export default firebaseConfig;
 
+console.log("🔐 Firebase API Key:", process.env.REACT_APP_FIREBASE_API_KEY);
+console.log("🔐 Firebase Auth Domain:", process.env.REACT_APP_FIREBASE_AUTH_DOMAIN);

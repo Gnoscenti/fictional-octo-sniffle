@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <AuthProvider> { /* Wrap App with AuthProvider */}
+    <AuthProvider> { Wrap App with AuthProvider }
       <App />
     </AuthProvider>
   </React.StrictMode>
