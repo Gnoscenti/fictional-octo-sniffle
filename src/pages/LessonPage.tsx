@@ -165,7 +165,9 @@ const LessonPage: React.FC = () => {
             <ReactMarkdown>{markdownContent}</ReactMarkdown>
           </article>
 
-          {lesson.id === "lesson_with_sandbox_example" && <CodeSandbox />} 
+          {lesson.id === "lesson_with_sandbox_example" && (
+  <CodeSandbox sandboxUrl="https://codesandbox.io/embed/react-new" />
+)}
 
           <div className="mt-8 flex justify-between items-center">
             <button 
